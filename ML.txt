@@ -1,0 +1,51 @@
+MACHINE LERNING : L'art de donner a la machine la capiciter d'apprendre sans la programmation de facons explicite. 
+Consite a develloper un modele mathematique apartir de donnees experimentale 
+Il existe 3 technique :
+- L'apprentisage superviser 
+- L'apprentisage non superviser 
+- L'apprentisage par renforcement
+
+I. L'apprentisage superviser 
+	la machine recoit des donnees caracterisees par des variables x (features) et annottes d'une variable y (label : etiquete)
+
+LE BUT : est que la machine apprene a predir la valeur de "y" (target variable) en fonction de feature "x" qu'on lui donne. 
+
+PROCEDURE : 
+1. On fourni des donnees a la machine (on constitue un Dataset)
+2. On specifie le type de modele que la machine doit apprendre (NOTE : il en exist plusieur)
+3. Phase d'entrainement 
+
+Scikit-learn : apres l'initialisation du model, on vas pouvoir l'entrenner, l'evaluer et l'utiliser en utilisant 3 methode : 
+  - FIT : On fait passer nos donner X, Y [x et y doivent avoir 2 dimension : n_samples, n_features]
+	model.fit(X_train, y_train)
+  - SCORE : Evaluation du model en fessant passer le donner x, y [et la machine utilise le donner x pour faire des prediction et le comparer aux valeur y]
+	model.score(X, Y)  
+  - PREDICT : Utilisation du model en faisant des prediction 
+	model.predict(X)
+
+
+Grace a ce probleme on peux resoudre deux type de probleme : -Regression (y variable continue ) ; - classification (y variable discret)
+
+
+L'apprentisage superviser									|	L'apprentisage non superviser 
+
+problèmes de classification et de régression 
+classification : prédire une étiquette (catégorie) à partir d'un ensemble de données d'entrée	|	K-Means, Clustering 
+regression : prédire une valeur continue à partir des données d'entrée.
+
+Bibliothèques : 
+
+scikit-learn  : 
+	- Supervisé : Régression, classification.
+		Régression : Régression linéaire, SVM pour la régression, régression par forêts aléatoires, k-NN, etc.
+		classification : Régression logistique, SVM, arbres de décision, forêts aléatoires, k-NN, etc.
+	Note : 
+		Régression : Prédiction d'une quantité continue (ex : prix d'une maison, température). 
+		Classification : Prédiction d'une catégorie ou étiquette (ex : chien, chat, ou oiseau).
+	- Non supervisé : Clustering, PCA, analyse de données.
+PyTorch et TensorFlow :
+	Supervisé : Réseaux neuronaux pour la classification, régression.
+	Non supervisé : Autoencodeurs, GANs (pour la génération de données), clustering avec des réseaux neuronaux, etc.
+
+NOTE : Donc, scikit-learn, PyTorch et TensorFlow permettent d'aborder les deux types d'apprentissage (supervisé et non supervisé),
+mais classification et régression sont strictement supervisées.
